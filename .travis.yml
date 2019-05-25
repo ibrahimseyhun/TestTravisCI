@@ -1,0 +1,10 @@
+language: csharp
+solution: TestTravis\TestTravis.sln
+mono: none
+dotnet: 2.1.502
+before_script: cd TestTravis
+script:
+ - dotnet restore
+deploy:
+  provider: azure_web_apps
+  verbose: true
